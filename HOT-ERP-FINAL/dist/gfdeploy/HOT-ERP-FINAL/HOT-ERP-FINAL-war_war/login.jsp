@@ -89,7 +89,7 @@
                                     </label>
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                               <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Login</button>
+                                <a href="index.html" class="btn btn-lg btn-success btn-block">Login</a>
                             </fieldset>
                         </form>
                     </div>
