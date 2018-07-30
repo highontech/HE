@@ -75,11 +75,9 @@
                                                 <option value="0">CEO</option>
                                                 <option value="1">CTO</option>
                                                 <option value="2">Intern</option>
-                                                <option value="3">Employe</option>
+                                                <option value="3">Employee</option>
                                                 <option value="4">MO</option>
-                                                <option value="5">Manager</option>
-                                                     
-                                                     
+                                                <option value="5">Manager</option>      
                                                 </select>
                                             
                                         </div>
