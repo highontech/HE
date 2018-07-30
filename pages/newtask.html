@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+
+    <!-- Morris Charts CSS -->
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../vendor/raphael/raphael.min.js"></script>
+    <script src="../vendor/morrisjs/morris.min.js"></script>
+    <script src="../data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top logo-blue" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle logo-blue logo-blue-hover" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html" >SB Admin v2.0</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right logo-blue logo-blue-hover ">
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" >
+                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#" >
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> View
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#" >
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> Clear
+                                </div>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" >
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#" ><i class="fa fa-user fa-fw"></i> Change Password</a>
+                        </li>
+                        <li><a href="#" ><i class="fa fa-gear fa-fw"></i> View Logs </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html" ><i class="fa fa-sign-out fa-fw"></i> Sign out</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar " role="navigation" >
+                <div class="sidebar-nav navbar-collapse logo-blue-hover">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li class="active">
+                            <a href="#"><i class="fa fa-dashboard fa-fw" ></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-line-chart"></i> Projects <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="Currentproject.html">Current Project</a>
+                                </li>
+                                <li>
+                                    <a href="Newproject.html">New Project</a>
+                                </li>
+                               
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-calendar-check-o" ></i> Attendence <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#"> View Attendence </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Mark Attendence </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Apply Leave </a>
+                                </li>
+                                <li>
+                                    <a href="#"> View Team Attendence </a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="  fa fa-tasks" ></i> Tasks <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#"> View New Task </a>
+                                </li>
+                                <li>
+                                    <a href="#"> View Submitted Task </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Assign Task</a>
+                                </li>
+								<li>
+                                    <a href="#">View Report</a>
+                                </li>
+								<li>
+                                    <a href="#"> Submit Report</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="  fa fa-retweet" ></i> Payment <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#"> Loans </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Pay Slips </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Reburstments </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Allounces </a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="  fa fa-bar-chart" ></i> Access Control <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#"> Product Manager </a>
+                                </li>
+                                
+                            </ul>
+                          
+                            <!-- /.nav-second-level -->
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper" class="">
+                <div class="row">
+                    <div class="col-lg-12" >
+                        <h1 class="page-header logo-blue">New Task </h1>
+                    </div>
+					
+					 </div>
+					 <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+						
+                            Apply here
+                        </div>
+						
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form">
+                                        <div class="form-group">
+										   <div class="form-group">
+                                            <label>Task ID</label>
+                                            <input class="form-control" placeholder="Enter text">
+											
+                                        </div>
+										 <div class="form-group">
+                                            <label>Task Name</label>
+                                            <input class="form-control" placeholder="Enter text">
+                                        </div>
+										<h3>Task</h3>
+                                            <label> Starting Date</label>
+                                            <br><input id="date" type="date"></br>
+											<label> Ending Date</label>
+                                            <br><input id="date" type="date"></br>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Additonal Resources</label>
+                                            <input type="file">
+                                        </div>
+										<img src="smiley.gif" alt="Smiley face" width="42" height="42" border="5">
+                                            <div class="form-group">
+                                            <label>Task Details</label>
+                                            <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+										
+                                        
+                                  
+                                       
+                                    </form>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+</form>
+
+    </div>
+										
+										
+            <div 
+                        
+                            <!-- /.table-responsive -->
+                </div>
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+
+</body>
+
+</html>
