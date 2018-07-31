@@ -32,7 +32,7 @@ public class loginservlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-         String user = request.getParameter("username");
+         String users = request.getParameter("username");
          String pass = request.getParameter("password");
          
         try (PrintWriter out = response.getWriter()) {
@@ -44,7 +44,7 @@ public class loginservlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet loginservlet at " + request.getContextPath() + "</h1>");
-            out.println("<h1>Servlet loginservlet at " + user +  "</h1>");
+            out.println("<h1>Servlet loginservlet at " + users +  "</h1>");
             out.println("<h1>Servlet loginservlet at " + pass + "</h1>");
             out.println("</body>");
             out.println("</html>");
