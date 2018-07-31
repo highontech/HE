@@ -61,10 +61,8 @@ public class loginservlet extends HttpServlet {
              out.println("<h1>Connection 1</h1>");
               Statement stmt = con.createStatement();
              String query = "INSERT INTO login (username, password, designation) VALUES('"+username+"','"+pass+"','"+designation+"');";
-             ResultSet rs = stmt.executeQuery(query);
-             out.println("<h1>Connection 2</h1>");
-             
-           //  PreparedStatement pps = con.prepareStatement(query);
+             stmt.executeQuery(query);
+            
               out.println("<h1>Inserted </h1>");
              
              
