@@ -6,6 +6,11 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -40,21 +45,44 @@ public class loginservlet extends HttpServlet {
         
         try (PrintWriter out = response.getWriter()) 
         {
-            /* TODO output your page here. You may use following sample code. */
+            String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+            String url = "jdbc:sqlserver://localhost:1433;databaseName=HOT ERP";
+            String user = "HOTERP";
+            String passdatabase ="1122";
+            
+            try
+            {
+             out.println("<h1>Connection 0</h1>");
+             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+             Connection con = DriverManager.getConnection(url, user, passdatabase);
+             out.println("<h1>"+username+ "</h1>");
+             out.println("<h1>"+pass+"</h1>");
+             out.println("<h1>"+designation+"</h1>");
+             out.println("<h1>Connection 1</h1>");
+             String query = "INSERT INTO login (username, password, designation) VALUES('"+username+"','"+pass+"','"+designation+"');";
+             out.println("<h1>Connection 2</h1>");
+             
+             PreparedStatement pps = con.prepareStatement(query);
+              out.println("<h1>Inserted </h1>");
+             
+             
+            }
+            
+            catch(Exception e)
+            {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet loginservlet</title>");            
+            out.println("<title>Error</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>" + username + "</h1>");
-            out.println("<h1>" + pass + "</h1>");
-            out.println("<h1>" + designation + "</h1>");
+            out.println("<h1> "+ e + "  </h1>");
             out.println("</body>");
             out.println("</html>");
+            }  
         }
     }
-
+        
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -92,6 +120,7 @@ public class loginservlet extends HttpServlet {
     @Override
     public String getServletInfo() {
         return "Short description";
-    }// </editor-fold>
-
+    }
 }
+
+
