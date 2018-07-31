@@ -24,7 +24,7 @@
 <div class="login-wrapper">
         <nav class="navbar navbar-default navbar-static-top logo-blue" role="navigation">
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.html" >SB Admin v2.0</a>
+                <a class="navbar-brand" href="index.html" >High On Tech ERP.V-1.0</a>
             </div>
         </nav>
     <br>
