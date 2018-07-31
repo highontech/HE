@@ -43,26 +43,22 @@
                                     <input class="form-control" placeholder="E-mail" name="username" type="text" autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                   <input class="form-control" placeholder="Password" name="password" type="password" value="">
                                 </div>
-                                 <div class="form-group">
+                                 <div class="form-group" type="text" >
                                             
-                                            <div class="form-group">                                                 <select id="disabledSelect" class="form-control">
-                                                <option value="" disabled selected hidden>Choose Designation</option>
-                                                <option value="0">CEO</option>
-                                                <option value="1">CTO</option>
-                                                <option value="2">Intern</option>
-                                                <option value="3">Employee</option>
-                                                <option value="4">MO</option>
-                                                <option value="5">Manager</option>      
-                                                </select>
-                                            
-                                        </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
-                                    </label>
-                                </div>
+                                            <div class="form-group">                                                 
+                                               <select id="disabledSelect" class="form-control" name="designation" >
+                                                <option value="" disabled selected hidden> Choose Designation</option>
+                                                <option value="CEO">CEO</option>
+                                                <option value="CTO">CTO</option>
+                                                <option value="Intern">Intern</option>
+                                                <option value="Employee">Employee</option>
+                                                <option value="MO">MO</option>
+                                                <option value="Manager">Manager</option>      
+                                               </select>   
+                                          </div>
+          
                                 <!-- Change this to a button or input when using this as a form -->
                                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Login</button>
                             </fieldset>

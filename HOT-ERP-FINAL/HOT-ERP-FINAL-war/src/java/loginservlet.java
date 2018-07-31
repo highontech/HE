@@ -29,9 +29,17 @@ public class loginservlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+     throws ServletException, IOException 
+    {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+        
+        
+        String username = request.getParameter("username");
+        String pass = request.getParameter("password");
+        String designation = request.getParameter("designation");
+        
+        try (PrintWriter out = response.getWriter()) 
+        {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -39,7 +47,9 @@ public class loginservlet extends HttpServlet {
             out.println("<title>Servlet loginservlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet loginservlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>" + username + "</h1>");
+            out.println("<h1>" + pass + "</h1>");
+            out.println("<h1>" + designation + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
