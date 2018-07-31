@@ -43,42 +43,37 @@ public class loginservlet extends HttpServlet {
         String pass = request.getParameter("password");
         String designation = request.getParameter("designation");
         
-        try (PrintWriter out = response.getWriter()) 
-        {
+        try (PrintWriter out = response.getWriter()) {
             String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
             String url = "jdbc:sqlserver://localhost:1433;databaseName=HOT ERP";
             String user = "HOTERP";
             String passdatabase ="1122";
             
-            try
-            {
-             out.println("<h1>Connection 0</h1>");
-             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-             Connection con = DriverManager.getConnection(url, user, passdatabase);
-             out.println("<h1>"+username+ "</h1>");
-             out.println("<h1>"+pass+"</h1>");
-             out.println("<h1>"+designation+"</h1>");
-             out.println("<h1>Connection 1</h1>");
-              Statement stmt = con.createStatement();
-             String query = "INSERT INTO login (username, password, designation) VALUES('"+username+"','"+pass+"','"+designation+"');";
-             stmt.executeQuery(query);
-            
-              out.println("<h1>Inserted </h1>");
-             
-             
-            }
-            
-            catch(Exception e)
-            {
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Error</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1> "+ e + "  </h1>");
-            out.println("</body>");
-            out.println("</html>");
+            try {
+                out.println("<h1>Connection 0</h1>");
+                Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+                Connection con = DriverManager.getConnection(url, user, passdatabase);
+                out.println("<h1>"+username+ "</h1>");
+                out.println("<h1>"+pass+"</h1>");
+                out.println("<h1>"+designation+"</h1>");
+                out.println("<h1>Connection 1</h1>");
+                Statement stmt = con.createStatement();
+                String query = "INSERT INTO login (username, password, designation) VALUES('"+username+"','"+pass+"','"+designation+"');";
+                stmt.executeQuery(query);
+
+                out.println("<h1>Inserted </h1>");
+ 
+            } catch(Exception e) {
+                
+                out.println("<!DOCTYPE html>");
+                out.println("<html>");
+                out.println("<head>");
+                out.println("<title>Error</title>");            
+                out.println("</head>");
+                out.println("<body>");
+                out.println("<h1> "+ e + "  </h1>");
+                out.println("</body>");
+                out.println("</html>");
             }  
         }
     }
