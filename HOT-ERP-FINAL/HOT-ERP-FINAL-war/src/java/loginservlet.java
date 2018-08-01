@@ -45,13 +45,15 @@ public class loginservlet extends HttpServlet {
         
         try (PrintWriter out = response.getWriter()) {
             String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-            String url = "jdbc:sqlserver://localhost:1433;databaseName=HOT ERP";
+            // String driver = "com.microsoft.jdbc.sqlserver.SQLServerDriver";
+            String url = "jdbc:sqlserver://localhost:1527;databaseName=HOT ERP";
             String user = "HOTERP";
             String passdatabase ="1122";
             
             try {
                 out.println("<h1>Connection 0</h1>");
-                Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+                // Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver")
+                Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
                 Connection con = DriverManager.getConnection(url, user, passdatabase);
                 out.println("<h1>"+username+ "</h1>");
                 out.println("<h1>"+pass+"</h1>");
