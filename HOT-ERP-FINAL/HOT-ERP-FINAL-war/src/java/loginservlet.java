@@ -51,6 +51,11 @@ public class loginservlet extends HttpServlet {
             String passdatabase ="1122";
             
             try {
+                
+                String usern = null;
+                String passw = null;
+                String desig = null;
+                
                 out.println("<h1>Connection 0</h1>");
                 // Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver")
                 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -60,10 +65,27 @@ public class loginservlet extends HttpServlet {
                 out.println("<h1>"+designation+"</h1>");
                 out.println("<h1>Connection 1</h1>");
                 Statement stmt = con.createStatement();
-                String query = "INSERT INTO login (username, password, designation) VALUES('"+username+"','"+pass+"','"+designation+"');";
-                stmt.executeQuery(query);
+                String query="SELECT * FROM login WHERE CONVERT(VARCHAR, username)='"+username+"' AND CONVERT(VARCHAR, password)='"+pass+"'AND CONVERT(VARCHAR, designation)='"+designation+"';";
+            
 
-                out.println("<h1>Inserted </h1>");
+             ResultSet rs=  stmt.executeQuery(query);
+             
+             while(rs.next())
+             {
+             usern=rs.getString("username");    
+             passw=rs.getString("password");    
+             desig=rs.getString("designation"); 
+             }
+
+             if(usern!=null && passw!=null && desig!=null)
+             {
+                 out.print("Successful Login");
+             }
+             
+             else
+             {
+                 out.print("Cant Login");
+             }
  
             } catch(Exception e) {
                 
