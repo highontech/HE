@@ -55,15 +55,9 @@ public class loginservlet extends HttpServlet {
                 String usern = null;
                 String passw = null;
                 String desig = null;
-                
-                out.println("<h1>Connection 0</h1>");
-                // Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver")
+               
                 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
                 Connection con = DriverManager.getConnection(url, user, passdatabase);
-                out.println("<h1>"+username+ "</h1>");
-                out.println("<h1>"+pass+"</h1>");
-                out.println("<h1>"+designation+"</h1>");
-                out.println("<h1>Connection 1</h1>");
                 Statement stmt = con.createStatement();
                 String query="SELECT * FROM login WHERE CONVERT(VARCHAR, username)='"+username+"' AND CONVERT(VARCHAR, password)='"+pass+"'AND CONVERT(VARCHAR, designation)='"+designation+"';";
             
@@ -73,8 +67,51 @@ public class loginservlet extends HttpServlet {
                     usern=rs.getString("username");    
                     passw=rs.getString("password");    
                     desig=rs.getString("designation");
-                    out.print("Successful Login");
-                    //out.print(rs);
+                    
+                    
+                   if(desig.equals("MD"))
+                    {
+                        
+                    }
+                      
+                  else if(desig.equals("CEO"))
+                    {
+                        
+                    }
+                    
+                    else if(desig.equals("MO"))
+                    {
+                        
+                    }
+                    
+                   else if(desig.equals("CTO"))
+                    {
+                        
+                    }
+                    
+                   
+                   else if(desig.equals("Team Leader"))
+                    {
+                          response.sendRedirect("http://localhost:8080/HOT-ERP-FINAL-war/teamlead.jsp");      
+                    }   
+                    
+                   else if(desig.equals("Team Member"))
+                    {
+                        
+                    }
+                    
+                   else if(desig.equals("HR Manager"))
+                    {
+                        
+                    }
+                    
+                   else if(desig.equals("Product Manager"))
+                    {
+                        
+                    }
+                    
+                    
+                   
                 } catch(Exception e) {
                     out.print(e);
                     usern = null;
@@ -83,18 +120,7 @@ public class loginservlet extends HttpServlet {
                     response.sendRedirect("http://localhost:8080/HOT-ERP-FINAL-war/login.jsp");
                     out.print("Cant Login");
                 }
-//                while(rs.next()){
-//                    usern=rs.getString("username");    
-//                    passw=rs.getString("password");    
-//                    desig=rs.getString("designation"); 
-//                    System.out.println(usern + passw + desig);
-//                    if (usern!=null && passw!=null && desig!=null){
-//                        out.print("Successful Login");
-//                    } else {
-//                        response.sendRedirect("http://localhost:8080/HOT-ERP-FINAL-war/login.jsp");
-//                        out.print("Cant Login");
-//                    }
-//                } 
+ 
             } catch(Exception e) {
                 
                 out.println("<!DOCTYPE html>");

@@ -50,12 +50,14 @@
                                             <div class="form-group">                                                 
                                                <select id="disabledSelect" class="form-control" name="designation" >
                                                 <option value="" disabled selected hidden> Choose Designation</option>
+                                                <option value="MD">MD</option>
                                                 <option value="CEO">CEO</option>
-                                                <option value="CTO">CTO</option>
-                                                <option value="Intern">Intern</option>
-                                                <option value="Employee">Employee</option>
                                                 <option value="MO">MO</option>
-                                                <option value="Manager">Manager</option>      
+                                                <option value="CTO">CTO</option>
+                                                <option value="Team Leader">Team Leader</option>
+                                                <option value="Team Member">Team Member</option>   
+                                                <option value="HR Manager">HR Manager</option>  
+                                                <option value="Product Manager">Product Manager</option>    
                                                </select>   
                                           </div>
           
