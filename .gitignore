@@ -13,4 +13,8 @@
 /HOT-ERP-FINAL/HOT-ERP-FINAL-war/test/
 /HOT-ERP-FINAL/HOT-ERP-FINAL-war/build
 /HOT-ERP-FINAL/dist/
+<<<<<<< HEAD
+=======
+HOT-ERP-FINAL/HOT-ERP-FINAL-war/nbproject/private/private.properties
+>>>>>>> 554d8dc5b9d011d65d543b1ef47cb30e25d6b962
 *.properties
