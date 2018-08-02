@@ -68,26 +68,20 @@ public class loginservlet extends HttpServlet {
                 String query="SELECT * FROM login WHERE CONVERT(VARCHAR, username)='"+username+"' AND CONVERT(VARCHAR, password)='"+pass+"'AND CONVERT(VARCHAR, designation)='"+designation+"';";
             
 
-             ResultSet rs=  stmt.executeQuery(query);
+                ResultSet rs = stmt.executeQuery(query);
              
-             while(rs.next())
-             {
-             usern=rs.getString("username");    
-             passw=rs.getString("password");    
-             desig=rs.getString("designation"); 
-             }
-
-             if(usern!=null && passw!=null && desig!=null)
-             { 
-                 out.print("Successful Login");
-             }
-             
-             else
-             {
-                 response.sendRedirect("http://localhost:8080/HOT-ERP-FINAL-war/login.jsp");
-                 out.print("Cant Login");
-             }
- 
+                while(rs.next()){
+                    usern=rs.getString("username");    
+                    passw=rs.getString("password");    
+                    desig=rs.getString("designation"); 
+                    System.out.println(usern + passw + desig);
+                    if (usern!=null && passw!=null && desig!=null){
+                         out.print("Successful Login");
+                    } else {
+                         response.sendRedirect("http://localhost:8080/HOT-ERP-FINAL-war/login.jsp");
+                         out.print("Cant Login");
+                    }
+                } 
             } catch(Exception e) {
                 
                 out.println("<!DOCTYPE html>");
