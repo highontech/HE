@@ -51,13 +51,11 @@ public class loginservlet extends HttpServlet {
             String passdatabase ="1122";
             
             try {
-                
                 String usern = null;
                 String passw = null;
                 String desig = null;
                 
                 out.println("<h1>Connection 0</h1>");
-                // Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver")
                 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
                 Connection con = DriverManager.getConnection(url, user, passdatabase);
                 out.println("<h1>"+username+ "</h1>");
@@ -68,27 +66,21 @@ public class loginservlet extends HttpServlet {
                 String query="SELECT * FROM login WHERE CONVERT(VARCHAR, username)='"+username+"' AND CONVERT(VARCHAR, password)='"+pass+"'AND CONVERT(VARCHAR, designation)='"+designation+"';";
             
 
-             ResultSet rs=  stmt.executeQuery(query);
-             
-             while(rs.next())
-             {
-             usern=rs.getString("username");    
-             passw=rs.getString("password");    
-             desig=rs.getString("designation"); 
-             }
+                ResultSet rs=  stmt.executeQuery(query);
 
-             if(usern!=null && passw!=null && desig!=null)
-             {
-                 out.print("Successful Login");
-             }
-             
-             else
-             {
-                 out.print("Cant Login");
-             }
+                while(rs.next()) {
+                    usern=rs.getString("username");    
+                    passw=rs.getString("password");    
+                    desig=rs.getString("designation"); 
+                }
+
+                if(usern!=null && passw!=null && desig!=null) {
+                    out.print("Successful Login");
+                } else {
+                    out.print("Cant Login");
+                }
  
-            } catch(Exception e) {
-                
+            } catch(Exception e) { 
                 out.println("<!DOCTYPE html>");
                 out.println("<html>");
                 out.println("<head>");
