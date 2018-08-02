@@ -78,12 +78,13 @@ public class loginservlet extends HttpServlet {
              }
 
              if(usern!=null && passw!=null && desig!=null)
-             {
+             { 
                  out.print("Successful Login");
              }
              
              else
              {
+                 response.sendRedirect("http://localhost:8080/HOT-ERP-FINAL-war/login.jsp");
                  out.print("Cant Login");
              }
  
